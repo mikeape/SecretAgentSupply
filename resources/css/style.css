@@ -14,6 +14,8 @@ body {
 h1,
 h4 {
   font-weight: bold;
+  font-family: Helvetica;
+  font-weight: bold;
 }
 
 .container {
@@ -26,6 +28,7 @@ h4 {
   body {
     font-size: 16px;
   }
+
 }
 
 /* Company Header */
@@ -34,21 +37,29 @@ h4 {
   background-color: white;
   color: white;
 }
+
+
 .company header {
   background-color: black;
 }
 .company .products {
   background-color: white;
 }
-.company .container {
+.container {
+
+}
+.company header .container {
+  height: 1.32rem;
   display: flex;
   align-items: center;
-  padding: 12px 0 12px 0.5em;
+  font-size: 1rem;
+  font-family: Helvetica;
+
 }
 
 .company img {
-  height: 1.5em;
-  padding-right: 15px;
+  height: 1.5rem;
+  padding: 0 1.5rem 0 0.5rem;
 }
 
 /* Main Banner */
@@ -58,16 +69,17 @@ h4 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 25em;
+  height: 25rem;
 }
 
 .headline {
   background-color: black;
   color: white;
-  width: 20em;
-  padding: 2em 3em;
+  width: 20rem;
+  padding: 2rem 3rem;
   position: relative;
   top: 9em;
+  line-height: 0.25rem;
 }
 
 .headline h1 {
@@ -76,15 +88,18 @@ h4 {
   margin: 0.25em 0;
 }
 
+
+
 @media only screen and (max-width: 470px) {
   .main-banner {
-    height: 15em;
+    height: 15rem;
   }
 
   .headline {
     width: 100%;
-    padding: 1em 2em;
-    top: 10em;
+    padding: 1rem 2rem;
+    position: relative;
+    top: 10rem;
   }
 
   .headline h4 {
@@ -107,15 +122,21 @@ nav {
 nav ul {
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
-  padding: 0.75em 15.1em;
+  padding: 0.75rem 12.7rem;
+  margin: 0 auto;
+
   list-style: none;
 }
 nav ul li a {
+
   color: white;
+  /*padding: 0.75rem;*/
+
   text-decoration: none;
 }
-.mobile-nav {
+.mobile-nav li {
   display: none;
 }
 
@@ -128,37 +149,46 @@ nav ul li a {
   .mobile-nav {
     display: block;
     text-align: center;
+
   }
 }
 
 /* Products and Business Information Section */
+.container .products {
+  margin-top: 3rem;
 
+}
 .products,
 .business-info {
   display: flex;
   justify-content: space-between;
-  margin: 3em 0 0 0;
+  /*margin-right: 3rem;*/
+  /*margin-bottom: 3rem;*/
 
 }
 
 .product {
-  width: 19.5em;
+  width: 35%;
   /*justify-content: space-between;*/
   padding-right: 0.5em;
 }
 
 .product-image {
-  border: 3px solid black;
-  padding: 2em 0.5em;
-  height: 9em;
+  border: 4px solid black;
+  /*padding: 2em 0.5em;*/
+  /*height: 9em;*/
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 3rem;
 }
 
 .product-image img {
   max-width: 8em;
-  height: auto;
+  height: 9rem;
+    /*padding: 2rem 0 2rem 0;*/
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .description {
@@ -166,26 +196,28 @@ nav ul li a {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5rem 0.5rem;
 }
 
 .info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 15em;
-  padding-right: 29em;
+  /*justify-content: space-between;*/
+  width: 35%;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
 }
 
 .info .title {
   display: block;
   background-color: black;
   color: white;
-  padding: 1em 2em;
+  padding: 1rem 0 1rem 2rem;
+  /*margin: 3rem 0 4rem 0;*/
 }
 .info span {
   color: black;
-  padding-top: 1.5em;
+  /*padding-top: 1.5em;*/
   font-weight: bold;
 }
 
@@ -198,9 +230,15 @@ nav ul li a {
   .product.glasses {
     display: none;
   }
+  .product.watch, .product.pen {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 470px) {
+
   .products,
   .business-info {
     flex-wrap: wrap;
@@ -208,9 +246,12 @@ nav ul li a {
 
   .product {
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
   }
-
+  .description {
+    width: inherit;
+    margin: 0 auto;
+  }
   .product.watch {
     display: none;
   }
@@ -236,12 +277,17 @@ footer .container {
   align-items: center;
   maring: 0 auto;
   padding: 12px 0 12px 0.5em;
-  height: 7.5em;
+  height: 5rem;
+  text-align: left;
 }
 
 
 @media only screen and (max-width: 470px) {
-  footer {
+  footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     text-align: center;
   }
 }
