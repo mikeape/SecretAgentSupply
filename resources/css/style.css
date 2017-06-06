@@ -230,11 +230,11 @@ nav ul li a {
   .product.glasses {
     display: none;
   }
-  .product.watch, .product.pen {
+  /*.product.watch, .product.pen {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 470px) {
@@ -248,12 +248,9 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
   }
-  .description {
-    width: inherit;
-    margin: 0 auto;
-  }
+
   .product.watch {
     display: none;
   }
